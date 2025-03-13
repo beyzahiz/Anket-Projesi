@@ -17,5 +17,31 @@ form.addEventListener('submit', e=>{
 
     // console.log(score);
     result.classList.remove('d-none');
-    result.querySelector('span').textContent = `${score}%`;
+    let puan=0;
+    const bastir= setInterval(()=>{
+        result.querySelector('span').textContent = `${puan}%`;
+        if(puan == score)
+        {
+            clearInterval(bastir);
+        }
+        else
+        {
+            puan++;
+        }
+    }, 10);
 })
+
+// setTimeout(()=>{
+//     console.log('Beyza');
+// },2000);
+
+// let i=0;
+// const bastir=setInterval(()=>{
+//     console.log('Beyza');
+//     i++;
+//     if(i == 4)
+//     {
+//         clearInterval(bastir);
+//     }
+// })
+
