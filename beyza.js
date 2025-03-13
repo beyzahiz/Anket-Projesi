@@ -1,5 +1,6 @@
 const correctAnswer=['E','E','E','E'];
 const form=document.querySelector('.question-form');
+const result=document.querySelector('.result');
 
 form.addEventListener('submit', e=>{
     e.preventDefault();
@@ -14,5 +15,7 @@ form.addEventListener('submit', e=>{
         }
     })
 
-    console.log(score);
+    // console.log(score);
+    result.classList.remove('d-none');
+    result.querySelector('span').textContent = `${score}%`;
 })
